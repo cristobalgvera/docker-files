@@ -16,6 +16,7 @@ services:
       - HTTP_API=ON
       - HTTP_API_PORT=9000
       - EXTERNAL_FUNCTIONS=ON
+      - START_AFTER_INIT='Y'
 
 volumes:
   data:

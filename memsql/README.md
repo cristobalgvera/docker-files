@@ -17,6 +17,7 @@ docker volume rm memsql_data
 ## UI
 
 You can go to [http://localhost:8080](http://localhost:8080) and use
-the provided interface to query and manage your databases.
+the provided interface to query and manage your databases. To enter,
+you just need to set username as `root` and leave password field blank.
 
 Also, you can use API in port 9000.
