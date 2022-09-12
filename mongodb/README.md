@@ -1,7 +1,7 @@
 # MongoDB instance
 
 This Docker compose will create a MongoDB instance that will persist
-data inside a volume called `mongo_data`, meaning that every time
+data inside a volume called `mongodb_data`, meaning that every time
 this instance is removed, all the data will be saved and recovered
 if the instance is created again.
 
@@ -10,5 +10,5 @@ then you must run the following command inside this folder:
 
 ```bash
 docker compose down
-docker volume rm mongo_data
+docker volume rm mongodb_data
 ```
