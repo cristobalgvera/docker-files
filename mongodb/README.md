@@ -12,3 +12,8 @@ then you must run the following command inside this folder:
 docker compose down
 docker volume rm mongodb_data
 ```
+
+## UI
+
+You can go to [http://localhost:8081](http://localhost:8081) and use
+the provided interface to query and manage your databases.
