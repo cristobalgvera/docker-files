@@ -1,0 +1,21 @@
+---
+services:
+  memsql:
+    image: memsql/cluster-in-a-box 
+    restart: always
+    container_name: memsql
+    ports:
+      - 3306:3306
+      - 8080:8080
+      - 9000:9000
+    volumes:
+      - data:/var/lib/memsql
+    environment:
+      - LICENSE_KEY=${LICENSE_KEY}
+      - ROOT_PASSWORD=${ROOT_PASSWORD}
+      - HTTP_API=ON
+      - HTTP_API_PORT=9000
+      - EXTERNAL_FUNCTIONS=ON
+
+volumes:
+  data:
