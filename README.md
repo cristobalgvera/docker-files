@@ -18,7 +18,7 @@ To use MongoDB instance:
 
 ```bash
 # Go to mongodb folder
-cd mongodb
+cd db/mongodb
 
 docker compose up -d
 ```
