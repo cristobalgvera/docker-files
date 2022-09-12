@@ -44,5 +44,5 @@ docker compose down
 
 # If you want to remove persisted data
 # docker volume rm <DATABASE>_data
-docker volume rm mongo_data
+docker volume rm mongodb_data
 ```
