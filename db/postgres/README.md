@@ -1,16 +1,16 @@
 # PostgreSQL instance
 
 This Docker compose will create a PostgreSQL instance that will persist
-data inside a volume called `postgres_data`, meaning that every time
-this instance is removed, all the data will be saved and recovered
-if the instance is created again.
+data inside a volume called `postgres_data` and `postgres_pgadmin-data`,
+meaning that every time this instance is removed, all the data will be
+saved and recovered if the instance is created again.
 
 If you actually want to remove the instance with all persisted data,
 then you must run the following command inside this folder:
 
 ```bash
 docker compose down
-docker volume rm postgres_data
+docker volume rm postgres_data postgres_pgadmin-data
 ```
 
 ## UI
