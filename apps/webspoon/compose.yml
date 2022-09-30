@@ -4,7 +4,7 @@ services:
     image: hiromuhota/webspoon
     container_name: webspoon
     volumes:
-      - kettle:/home/tomcat/.kettle
+      - ./projects:/home/tomcat/.kettle/data/projects
       - pentaho:/home/tomcat/.pentaho
     ports:
       - 3080:8080
@@ -12,5 +12,4 @@ services:
       - JAVA_OPTS=-Xms${JAVA_MIN_HEAP}m -Xmx${JAVA_MAX_HEAP}m
 
 volumes:
-  kettle:
   pentaho:
