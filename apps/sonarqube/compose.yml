@@ -31,7 +31,7 @@ services:
     volumes:
       - scanner_cache:/opt/sonar-scanner/.sonar/cache
       - ${PATH_TO_REPOSITORY}:/usr/src
-      - ./sonnar-scanner.properties:/opt/sonar-scanner/conf/sonar-scanner.properties
+      - ./sonar-scanner.properties:/opt/sonar-scanner/conf/sonar-scanner.properties
     depends_on:
       - sonarqube
 

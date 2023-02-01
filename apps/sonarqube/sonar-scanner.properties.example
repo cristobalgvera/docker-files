@@ -8,6 +8,9 @@ sonar.projectName=Project Name
 # defaults to 'not provided'
 sonar.projectVersion=1.0
 
+# exclude files from the scanner
+# sonar.exclusions=**/migrations/*.ts
+
 # Path is relative to the sonar-project.properties file. Defaults to .
 # sonar.sources=.
 

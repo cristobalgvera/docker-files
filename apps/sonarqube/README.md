@@ -30,7 +30,9 @@ In order to use it you have to follow the next steps:
    ![sonarqube-my-account](./assets/sonarqube-my-account.png)
    ![sonarqube-personal-access-token](./assets/sonarqube-personal-access-token.png)
 
-1. Copy your token and paste it in the `SONAR_LOGIN` key in [.env](./.env) file
+1. Create a copy of the [.env.example](./.env.example) called `.env` in the
+   root folder.
+1. Copy your token and paste it in the `SONAR_LOGIN` key in `.env` file
    1. Change the `PATH_TO_REPOSITORY` key in there to point to your project
       (prefer absolute paths).
 1. Create a project in SonarQube
@@ -42,8 +44,10 @@ In order to use it you have to follow the next steps:
 
    ![sonarqube-create-project-2](./assets/sonarqube-create-project-2.png)
 
-1. Use the **Project key** in the [sonnar-scanner.properties](./sonnar-scanner.properties)
-   file, under the `sonar.projectKey` attribute.
+1. Create a copy of the [sonar-scanner.properties.example](./sonar-scanner.properties.example)
+   called `sonar-scanner.properties` in the root folder.
+1. Copy the **Project key** in the `sonar-scanner.properties` file, under the
+   `sonar.projectKey` attribute.
    1. Configure the rest of the properties in there.
 1. Run `docker compose -d scanner` and wait until it's done (it take a while).
    1. You can run `docker compose logs -f scanner` to watch it.
