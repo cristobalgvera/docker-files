@@ -5,14 +5,24 @@ sonar.projectKey=project-key
 
 # defaults to project key
 sonar.projectName=Project Name
+
 # defaults to 'not provided'
 sonar.projectVersion=1.0
+
+# path is relative to the sonar-project.properties file. Defaults to .
+sonar.sources=src
+
+# check test coverage
+sonar.javascript.lcov.reportPaths=coverage/lcov.info
+
+# exclude files from coverage
+sonar.coverage.exclusions=**/*.spec.ts, **/*.test.ts, **/main.ts
+
+# set the directory to store scanner work
+sonar.working.directory=../.scannerwork
 
 # exclude files from the scanner
 # sonar.exclusions=**/migrations/*.ts
 
-# Path is relative to the sonar-project.properties file. Defaults to .
-# sonar.sources=.
-
-# Encoding of the source code. Default is default system encoding
-sonar.sourceEncoding=UTF-8
+# encoding of the source code. Default is default system encoding
+# sonar.sourceEncoding=UTF-8
