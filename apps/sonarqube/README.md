@@ -3,6 +3,18 @@
 This Docker instance will start a SonarQube instance. It will allow you to
 measure the quality of your application.
 
+If you really want to remove the instance with all persisted data,
+then you must run the following command inside this folder:
+
+```bash
+docker compose down
+docker volume rm sonarqube_postgresql sonarqube_postgresql_data \
+  sonarqube_sonarqube_data sonarqube_sonarqube_extensions \
+  sonarqube_sonarqube_logs sonarqube_scanner_cache
+```
+
+## How to use it
+
 In order to use it you have to follow the next steps:
 
 1. Start the SonarQube instance using `docker compose up -d sonarqube`.
@@ -35,3 +47,5 @@ In order to use it you have to follow the next steps:
    1. Configure the rest of the properties in there.
 1. Run `docker compose -d scanner` and wait until it's done (it take a while).
    1. You can run `docker compose logs -f scanner` to watch it.
+1. When the process it's done, SonarQube will automatically reload the page
+   to show you the results.
