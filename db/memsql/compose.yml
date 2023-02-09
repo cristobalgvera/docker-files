@@ -2,8 +2,6 @@
 services:
   memsql:
     image: memsql/cluster-in-a-box 
-    restart: always
-    container_name: memsql
     ports:
       - 3306:3306
       - 8080:8080

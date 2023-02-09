@@ -2,7 +2,6 @@
 services:
   webspoon:
     image: hiromuhota/webspoon
-    container_name: webspoon
     volumes:
       - ./projects:/home/tomcat/.kettle/data/projects
       - pentaho:/home/tomcat/.pentaho
