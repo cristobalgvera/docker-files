@@ -18,11 +18,14 @@ sonar.javascript.lcov.reportPaths=coverage/lcov.info
 # exclude files from coverage
 sonar.coverage.exclusions=**/*.spec.ts, **/*.test.ts, **/main.ts
 
+# exclude files from code duplication detection
+sonar.cpd.exclusions=**/*.spec.ts, **/*.test.ts
+
 # set the directory to store scanner work
 sonar.working.directory=../.scannerwork
 
 # exclude files from the scanner
-# sonar.exclusions=**/migrations/*.ts
+sonar.exclusions=**/migrations/*.ts
 
 # encoding of the source code. Default is default system encoding
-# sonar.sourceEncoding=UTF-8
+sonar.sourceEncoding=UTF-8
