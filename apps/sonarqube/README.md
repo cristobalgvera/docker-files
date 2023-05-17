@@ -49,7 +49,6 @@ In order to use it you have to follow the next steps:
 1. Copy the **Project key** in the `sonar-scanner.properties` file, under the
    `sonar.projectKey` attribute.
    1. Configure the rest of the properties in there.
-1. Run `docker compose -d scanner` and wait until it's done (it take a while).
-   1. You can run `docker compose logs -f scanner` to watch it.
+1. Run `docker compose up scanner` and wait until it's done (it take a while).
 1. When the process it's done, SonarQube will automatically reload the page
    to show you the results.
