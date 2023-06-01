@@ -1,0 +1,29 @@
+---
+services:
+  firebase:
+    image: fixl/firebase-emulator-suite
+    environment:
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID}
+      - UI_PORT=${UI_PORT}
+      - FIRESTORE=${USE_FIRESTORE}
+      - FIRESTORE_PORT=${FIRESTORE_PORT}
+      - PUBSUB=${USE_PUBSUB}
+      - PUBSUB_PORT=${PUBSUB_PORT}
+      - DATABASE=${USE_DATABASE}
+      - DATABASE_PORT=${DATABASE_PORT}
+      - STORAGE=${USE_STORAGE}
+      - STORAGE_PORT=${STORAGE_PORT}
+    ports:
+      - ${UI_PORT}:${UI_PORT}
+      - ${FIRESTORE_PORT}:${FIRESTORE_PORT}
+      - ${STORAGE_PORT}:${STORAGE_PORT}
+    healthcheck:
+      test: /usr/bin/wget -qO- http://localhost:$UI_PORT
+      timeout: 30s
+      interval: 3s
+      retries: 10
+    volumes:
+      - data:/data
+
+volumes:
+  data:
