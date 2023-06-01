@@ -2,12 +2,13 @@
 services:
   redis:
     image: redis
-    command: redis-server --save 60 1 --loglevel warning --requirepass $REDIS_AUTH
+    command: redis-server --port $REDIS_PORT --save 60 1 --loglevel warning --requirepass $REDIS_AUTH
     environment:
-      - REDIS_AUTH=${REDIS_AUTH}
       - REDIS_REPLICATION_MODE=master
+      - REDIS_AUTH=${REDIS_AUTH}
+      - REDIS_PORT=${REDIS_PORT}
     ports:
-      - 6379:6379
+      - ${REDIS_PORT}:${REDIS_PORT}
     volumes:
       - data:/data
       - ./redis.conf:/usr/local/etc/redis/redis.conf
