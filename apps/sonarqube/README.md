@@ -7,10 +7,7 @@ If you really want to remove the instance with all persisted data,
 then you must run the following command inside this folder:
 
 ```bash
-docker compose down
-docker volume rm sonarqube_postgresql sonarqube_postgresql_data \
-  sonarqube_sonarqube_data sonarqube_sonarqube_extensions \
-  sonarqube_sonarqube_logs sonarqube_scanner_cache
+docker compose down --volumes
 ```
 
 ## How to use it

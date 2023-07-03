@@ -9,8 +9,7 @@ If you actually want to remove the instance with all persisted data,
 then you must run the following command inside this folder:
 
 ```bash
-docker compose down
-docker volume rm redis_data redis_redisinsight_data
+docker compose down --volumes
 ```
 
 ## UI

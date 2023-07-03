@@ -6,8 +6,7 @@ It will create one data volumes `webspoon_pentaho` to store configuration.
 In order to remove this instance, run the following commands:
 
 ```bash
-docker compose down
-docker volume rm webspoon_pentaho
+docker compose down --volumes
 ```
 
 ## UI

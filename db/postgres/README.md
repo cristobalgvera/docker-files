@@ -9,8 +9,7 @@ If you actually want to remove the instance with all persisted data,
 then you must run the following command inside this folder:
 
 ```bash
-docker compose down
-docker volume rm postgres_data postgres_pgadmin-data
+docker compose down --volumes
 ```
 
 ## UI
@@ -22,7 +21,7 @@ In order to connect your PostgreSQL instance to pgAdmin, you have to
 follow these steps:
 
 - Access [pgAdmin](http://localhost:5050) using credentials
-defined in your `.env` file.
+  defined in your `.env` file.
 
 - Register a new server.
 
@@ -38,7 +37,7 @@ defined in your `.env` file.
 
   **IMPORTANT:** The `Host name/address` variable, marked as **orange**, must be
   set equals to the Docker's container name, else connection will be unstable
-  when you restart the server. Also, *localhost* will not be your host address
+  when you restart the server. Also, _localhost_ will not be your host address
   when using the container, meaning it will not work as expected.
 
   **TIP**: Remember to mark `Save password?` switch in order to remember your credentials.
