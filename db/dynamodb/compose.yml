@@ -22,8 +22,6 @@ services:
   aws-cli:
     image: amazon/aws-cli
     command: dynamodb list-tables --endpoint-url http://dynamodb:8000 --region $CLI_AWS_REGION
-    ports:
-      - 8002:8080
     environment:
       - AWS_ACCESS_KEY_ID=${CLI_AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${CLI_AWS_SECRET_ACCESS_KEY}
