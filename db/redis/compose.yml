@@ -13,11 +13,11 @@ services:
       - data:/data
       - ./redis.conf:/usr/local/etc/redis/redis.conf
   redisinsight:
-    image: redislabs/redisinsight
+    image: redis/redisinsight
     ports:
-      - 8001:8001
+      - 5540:5540
     volumes:
-      - redisinsight_data:/db
+      - redisinsight_data:/data
     depends_on:
       - redis
 

@@ -14,13 +14,13 @@ docker compose down --volumes
 
 ## UI
 
-You can go to [http://localhost:8001](http://localhost:8001) and use
+You can go to [http://localhost:5540](http://localhost:5540) and use
 the provided interface to query and manage your databases.
 
 In order to connect your Redis instance to RedisInsight, you have to
 follow these steps:
 
-- Access to [RedisInsight](http://localhost:8001).
+- Access to [RedisInsight](http://localhost:5540).
 
 - Select _"I already have a database"_.
 
