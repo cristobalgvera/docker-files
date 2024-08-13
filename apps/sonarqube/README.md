@@ -29,7 +29,7 @@ In order to use it you have to follow the next steps:
 
 1. Create a copy of the [.env.example](./.env.example) called `.env` in the
    root folder.
-1. Copy your token and paste it in the `SONAR_LOGIN` key in `.env` file
+1. Copy your token and paste it in the `SONAR_TOKEN` key in `.env` file
    1. Change the `PATH_TO_REPOSITORY` key in there to point to your project
       (prefer absolute paths).
 1. Create a project in SonarQube

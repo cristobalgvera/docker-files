@@ -32,7 +32,7 @@ services:
     image: sonarsource/sonar-scanner-cli
     environment:
       - SONAR_HOST_URL=http://sonarqube:9000
-      - SONAR_LOGIN=${SONAR_LOGIN}
+      - SONAR_TOKEN=${SONAR_TOKEN}
     volumes:
       - scanner_cache:/opt/sonar-scanner/.sonar/cache
       - ${PATH_TO_REPOSITORY}:/usr/src
